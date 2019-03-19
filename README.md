@@ -2,7 +2,7 @@
 
 Backend for the live-feedback module for the TT-Conference-App. It will serve an API on which the several frontends can connect.
 
-# HowTo
+## HowTo
 
 G0 1.12 is at least needed to work with go mod.
 
