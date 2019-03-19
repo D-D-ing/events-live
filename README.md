@@ -1,5 +1,11 @@
 # events-live
-Separate view for when events are happening during the conference
+
+Backend for the live-feedback module for the TT-Conference-App. It will serve an API on which the several frontends can connect.
 
 # HowTo
-Nothing yet, cya later :)
+
+G0 1.12 is at least needed to work with go mod.
+
+```(cmd)
+go run events-live.go
+```

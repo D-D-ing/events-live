@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cd /go/src && go build -o /go/bin/hello-app'
+        sh 'cd /go/src && go build -o /go/bin/events-live'
       }
     }
   }
