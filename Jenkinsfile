@@ -6,9 +6,14 @@ pipeline {
 
   }
   stages {
+    stage('Test') {
+      steps {
+        sh 'go test ./cmd/web'
+      }
+    }
     stage('Build') {
       steps {
-        sh 'cd /go/src && go build -o /go/bin/events-live'
+        sh 'go build -o ./cmd/web'
       }
     }
   }
