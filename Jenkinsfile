@@ -6,6 +6,13 @@ pipeline {
 
   }
   stages {
+    stage('Information') {
+      steps {
+        sh 'ls -a'
+        sh 'go version'
+        sh 'go env'
+      }
+    }
     stage('Test') {
       steps {
         sh 'go test ./cmd/web'
@@ -13,7 +20,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'go build -o ./cmd/web'
+        sh 'go test ./cmd/web'
       }
     }
   }
