@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Information') {
       steps {
-        sh 'export XDG_CACHE_HOME=/tmp/.cache'
+        sh 'export GOCACHE=/tmp/.cache'
         sh 'ls -a'
         sh 'go version'
         sh 'go env'
