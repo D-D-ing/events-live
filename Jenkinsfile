@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('Information') {
       steps {
+        sh 'setenv XDG_CACHE_HOME /tmp/.cache'
         sh 'ls -a'
         sh 'go version'
         sh 'go env'
