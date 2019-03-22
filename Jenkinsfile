@@ -9,6 +9,7 @@ pipeline {
     stage('Information') {
       steps {
         sh 'export GOCACHE=/tmp/.cache'
+        sh 'whoami'
         sh 'ls -a'
         sh 'go version'
         sh 'go env'
