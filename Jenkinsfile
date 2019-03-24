@@ -1,16 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'golang:1.12.1-stretch'
-    }
-
-  }
+  agent { dockerfile true }
   stages {
     stage('Information') {
       steps {
-        sh 'export GOCACHE=/tmp/.cache'
-        sh 'whoami'
-        sh 'ls -a'
+        sh 'echo ${UID}'
+        sh 'ls -la'
         sh 'go version'
         sh 'go env'
       }
