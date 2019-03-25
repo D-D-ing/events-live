@@ -1,3 +1,9 @@
 FROM golang:1.12.1-stretch
+
 ARG USERID=112
-RUN chown ${USERID} /go
+ARG GROUPID=122
+ARG BUILDDIR=/home/builddir
+
+RUN mkdir -p ${BUILDDIR}
+RUN chown ${USERID}:${GROUPID} ${BUILDDIR} 
+RUN echo jenkins:x${USERID}:${GROUPID}:jenkins:${BUILDDIR}:/bin/bash >> /etc/passwd
