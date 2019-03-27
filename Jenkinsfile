@@ -1,5 +1,7 @@
 pipeline {
-  agent { dockerfile true }
+  agent {
+    dockerfile true
+  }
   stages {
     stage('Information') {
       steps {
@@ -16,7 +18,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'go test ./cmd/web'
+        sh 'go build ./cmd/web'
       }
     }
   }
